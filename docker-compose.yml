@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+
+  db:
+    image: postgres:13.6
+    volumes:
+      # The volume used for the database persistence.
+      - data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD:-postgres}
+    healthcheck:
+      test: pg_isready -U ${DATABASE_USERNAME:-postgres} -h 127.0.0.1
+      interval: 5s
+
+volumes:
+  data:
+    driver: local
