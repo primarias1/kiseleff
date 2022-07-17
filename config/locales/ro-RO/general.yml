@@ -213,9 +213,10 @@ ro:
       conditions: Termeni și condiții de utilizare
       consul: Cerere CONSUL
       consul_url: https://github.com/consul/consul
-      copyright: CONSUL, %{year}
-      description: Acest portal folosește %{consul} care este %{open_source}.
-      open_source: software open-source
+      kiseleff_url: https://github.com/primarias1/kiseleff
+      copyright: Primaria Sectorului 1, %{year}
+      description: Acest portal folosește software %{open_source}.
+      open_source: open-source
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
       participation_text: Decide cum vrei să arate orașul în care locuiești.
       participation_title: Participare
