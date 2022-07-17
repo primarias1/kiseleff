@@ -67,8 +67,8 @@ gem "wkhtmltopdf-binary", "~> 0.12.6"
 
 gem "dotenv-rails"
 
-gem "rollbar"
-gem "scout_apm"
+gem "sentry-ruby"
+gem "sentry-rails"
 
 source "https://rails-assets.org" do
   gem "rails-assets-leaflet"
