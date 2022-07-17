@@ -5,10 +5,12 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Confidential information
-/config/database.yml
 /config/secrets.yml
 /config/deploy-secrets.yml
 /config/maintenance.yml
+
+# Docker setup
+#/docker-compose.override.yml
 
 # Logfiles and tempfiles.
 log/*

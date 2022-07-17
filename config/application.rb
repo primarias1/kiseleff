@@ -28,60 +28,14 @@ module Kiseleff
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    # config.time_zone = 'Central Time (US & Canada)
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
-    available_locales = [
-      "ar",
-      "bg",
-      "bs",
-      "ca",
-      "cs",
-      "da",
-      "de",
-      "el",
-      "en",
-      "es",
-      "es-PE",
-      "eu",
-      "fa",
-      "fr",
-      "gl",
-      "he",
-      "hr",
-      "id",
-      "it",
-      "ka",
-      "nl",
-      "oc",
-      "pl",
-      "pt-BR",
-      "ro",
-      "ru",
-      "sl",
-      "sq",
-      "so",
-      "sr",
-      "sv",
-      "tr",
-      "uk-UA",
-      "val",
-      "zh-CN",
-      "zh-TW"]
-    config.i18n.available_locales = available_locales
-    config.i18n.fallbacks = {
-      "ca"    => "es",
-      "es-PE" => "es",
-      "eu"    => "es",
-      "fr"    => "es",
-      "gl"    => "es",
-      "it"    => "es",
-      "oc"    => "fr",
-      "pt-BR" => "es",
-      "val"   => "es"
-    }
+    available_locales = ["en", "fr", "ro"]
+    config.i18n.available_locales = ["en", "fr", "ro"]
+    config.i18n.fallbacks = { "fr" => "en" }
 
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**[^custom]*", "*.{rb,yml}")]
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "custom", "**", "*.{rb,yml}")]
@@ -95,28 +49,7 @@ module Kiseleff
 
     # Add lib to the autoload path
     config.autoload_paths << Rails.root.join("lib")
-    config.time_zone = "Madrid"
+    config.time_zone = "Bucharest"
     config.active_job.queue_adapter = :delayed_job
-
-    # CONSUL specific custom overrides
-    # Read more on documentation:
-    # * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md
-    # * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md
-    #
-    config.autoload_paths << "#{Rails.root}/app/components/custom"
-    config.autoload_paths << "#{Rails.root}/app/controllers/custom"
-    config.autoload_paths << "#{Rails.root}/app/graphql/custom"
-    config.autoload_paths << "#{Rails.root}/app/models/custom"
-    config.paths["app/views"].unshift(Rails.root.join("app", "views", "custom"))
-  end
-end
-
-class Rails::Engine
-  initializer :prepend_custom_assets_path, group: :all do |app|
-    if self.class.name == "Kiseleff::Application"
-      %w[images fonts].each do |asset|
-        app.config.assets.paths.unshift(Rails.root.join("app", "assets", asset, "custom").to_s)
-      end
-    end
   end
 end
