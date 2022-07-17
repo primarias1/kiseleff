@@ -76,7 +76,6 @@ source "https://rails-assets.org" do
 end
 
 group :development, :test do
-  gem "bullet", "~> 6.1.4"
   gem "byebug", "~> 11.1.3"
   gem "database_cleaner", "~> 2.0.1"
   gem "factory_bot_rails", "~> 6.2.0"
@@ -99,24 +98,12 @@ group :test do
 end
 
 group :development do
-  gem "capistrano", "~> 3.16.0", require: false
-  gem "capistrano-bundler", "~> 2.0", require: false
-  gem "capistrano-rails", "~> 1.6.1", require: false
-  gem "capistrano3-delayed-job", "~> 1.7.6"
-  gem "capistrano3-puma", "~> 5.0.4"
   gem "erb_lint", "~> 0.0.37", require: false
   gem "github_changelog_generator", "~> 1.15.2"
-  gem "mdl", "~> 0.11.0", require: false
-  gem "pronto", "~> 0.11.0", require: false
-  gem "pronto-erb_lint", "~> 0.1.5", require: false
-  gem "pronto-eslint", "~> 0.11.0", require: false
-  gem "pronto-rubocop", "~> 0.11.1", require: false
-  gem "pronto-scss", "~> 0.11.0", require: false
   gem "rubocop", "~> 1.18.4", require: false
   gem "rubocop-performance", "~> 1.11.4", require: false
   gem "rubocop-rails", "~> 2.11.3", require: false
   gem "rubocop-rspec", "~> 2.4.0", require: false
-  gem "rvm1-capistrano3", "~> 1.4.0", require: false
   gem "scss_lint", "~> 0.59.0", require: false
   gem "web-console", "~> 3.7.0"
 end
