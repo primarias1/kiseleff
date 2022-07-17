@@ -4,13 +4,14 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# App setup
+/.env
+/docker-compose.override.yml
+
 # Confidential information
 /config/secrets.yml
 /config/deploy-secrets.yml
 /config/maintenance.yml
-
-# Docker setup
-#/docker-compose.override.yml
 
 # Logfiles and tempfiles.
 log/*
