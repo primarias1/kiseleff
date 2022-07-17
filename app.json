@@ -1,0 +1,33 @@
+{
+    "name": "Kiseleff"
+    "description": "Platforma de bugetare participativa a Primariei Sectorului 1"
+    "repository": "https://github.com/primarias1/kiseleff",
+    "image": "heroku/ruby",
+    "addons": [
+	"papertrail",
+	"rollbar",
+	"heroku-postgres"
+    ],
+    "env": {
+    },
+    "environments": {
+	"test": {
+	    "addons": [
+		"papertrail",
+		"heroku-postgres:in-dyno"
+	    ],
+	    "env": {}
+	    "scripts": {
+		"test": "bin/rspec"
+	    }
+	}
+    },
+    "buildpacks": [
+	{
+	    "url": "https://github.com/drnic/heroku-buildpack-imagemagick-webp"
+	},
+	{
+	    "url": "https://github.com/heroku/heroku-buildpack-ruby"
+	}
+    ]
+}
