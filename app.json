@@ -4,17 +4,18 @@
     "repository": "https://github.com/primarias1/kiseleff",
     "image": "heroku/ruby",
     "addons": [
-	"papertrail",
-	"rollbar",
-	"heroku-postgres"
+	"heroku-postgres",
+	"heroku-redis",
+	"logtrail",
+	"sentry"
     ],
     "env": {
     },
     "environments": {
 	"test": {
 	    "addons": [
-		"papertrail",
-		"heroku-postgres:in-dyno"
+		"heroku-postgres:in-dyno",
+		"heroku-redis:in-dyno"
 	    ],
 	    "env": {}
 	    "scripts": {
