@@ -206,9 +206,10 @@ en:
       conditions: Terms and conditions of use
       consul: CONSUL application
       consul_url: https://github.com/consul/consul
-      copyright: CONSUL, %{year}
-      description: This portal uses the %{consul} which is %{open_source}.
-      open_source: open-source software
+      copyright: District 1 City Hall, %{year}
+      kiseleff_url: https://github.com/primarias1/kiseleff
+      description: This portal uses %{open_source} software.
+      open_source: open-source
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
       participation_text: Decide how to shape the city you want to live in.
       participation_title: Participation
