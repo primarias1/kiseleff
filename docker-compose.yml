@@ -11,6 +11,8 @@ services:
     healthcheck:
       test: pg_isready -U ${DATABASE_USERNAME:-postgres} -h 127.0.0.1
       interval: 5s
+    ports:
+      - 5432:5432
 
   cache:
     image: redis:6.2.3
@@ -21,6 +23,8 @@ services:
       interval: 1s
       timeout: 3s
       retries: 30
+    ports:
+      - 6379:6379
     
 volumes:
   data:
