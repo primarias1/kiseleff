@@ -51,12 +51,4 @@ Rails.application.configure do
   config.active_storage.service = :test
 
   config.cache_store = :null_store
-
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.bullet_logger = true
-    if ENV["BULLET"]
-      Bullet.raise = true # raise an error if n+1 query occurs
-    end
-  end
 end

@@ -32,9 +32,8 @@ module Kiseleff
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
-    available_locales = ["en", "fr", "ro"]
-    config.i18n.available_locales = ["en", "fr", "ro"]
+    config.i18n.default_locale = :ro
+    config.i18n.available_locales = ["ro", "en", "fr"]
     config.i18n.fallbacks = { "fr" => "en" }
 
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**[^custom]*", "*.{rb,yml}")]
