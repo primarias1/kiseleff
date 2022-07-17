@@ -4,6 +4,8 @@ ruby "2.7.6"
 
 gem "rails", "5.2.7.1"
 
+gem "redis"
+
 gem "acts-as-taggable-on", "~> 8.1.0"
 gem "acts_as_votable", "~> 0.13.1"
 gem "ahoy_matey", "~> 3.2.0"
@@ -17,7 +19,7 @@ gem "caxlsx_rails", "~> 0.6.2"
 gem "ckeditor", "~> 4.3.0"
 gem "cocoon", "~> 1.2.15"
 gem "daemons", "~> 1.4.0"
-gem "dalli", "~> 2.7.11"
+
 gem "delayed_job_active_record", "~> 4.1.6"
 gem "devise", "~> 4.8.0"
 gem "devise-security", "~> 0.16.0"

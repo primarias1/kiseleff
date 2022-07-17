@@ -131,7 +131,6 @@ GEM
       tins (~> 1.6)
     crass (1.0.6)
     daemons (1.4.0)
-    dalli (2.7.11)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
@@ -441,6 +440,7 @@ GEM
     recipient_interceptor (0.3.0)
       mail
     redcarpet (3.5.1)
+    redis (4.7.1)
     regexp_parser (2.1.1)
     request_store (1.5.0)
       rack (>= 1.4)
@@ -635,7 +635,6 @@ DEPENDENCIES
   cocoon (~> 1.2.15)
   coveralls (~> 0.8.23)
   daemons (~> 1.4.0)
-  dalli (~> 2.7.11)
   database_cleaner (~> 2.0.1)
   delayed_job_active_record (~> 4.1.6)
   devise (~> 4.8.0)
@@ -679,6 +678,7 @@ DEPENDENCIES
   rails-assets-markdown-it (~> 9.0.1)!
   recipient_interceptor (~> 0.3.0)
   redcarpet (~> 3.5.1)
+  redis
   responders (~> 3.0.1)
   rinku (~> 2.0.6)
   rspec-rails (~> 5.0)

@@ -12,6 +12,18 @@ services:
       test: pg_isready -U ${DATABASE_USERNAME:-postgres} -h 127.0.0.1
       interval: 5s
 
+  cache:
+    image: redis:6.2.3
+    volumes:
+      - redis:/data
+    healthcheck:
+      test: redis-cli ping
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    
 volumes:
   data:
+    driver: local
+  redis:
     driver: local
