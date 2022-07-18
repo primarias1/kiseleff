@@ -73,6 +73,9 @@ gem "wkhtmltopdf-binary", "~> 0.12.6"
 
 gem "dotenv-rails"
 
+# Metrics
+gem "barnes"
+
 gem "sentry-ruby"
 gem "sentry-rails"
 
